@@ -30,6 +30,7 @@ public class RestExceptionHandler {
    * @return ResponseEntity<ErrorResponse> type object for displaying the error code and error
    *     message along with HttpStatus as BAD_REQUEST.
    */
+  
   @ExceptionHandler(SignUpRestrictedException.class)
   public ResponseEntity<ErrorResponse> signupRestrictedException(
       SignUpRestrictedException exception, WebRequest request) {
@@ -47,6 +48,7 @@ public class RestExceptionHandler {
    * @return ResponseEntity<ErrorResponse> type object displaying the error code and error message
    *     along with HttpStatus as UNAUTHORIZED
    */
+  
   @ExceptionHandler(AuthenticationFailedException.class)
   public ResponseEntity<ErrorResponse> authenticationFailedException(
       AuthenticationFailedException exception, WebRequest request) {
@@ -64,6 +66,7 @@ public class RestExceptionHandler {
    * @return ResponseEntity<ErrorResponse> type object displaying error code and error message along
    *     with HttpStatus as FORBIDDEN.
    */
+  
   @ExceptionHandler(AuthorizationFailedException.class)
   public ResponseEntity<ErrorResponse> authorizationFailedException(
       AuthorizationFailedException exception, WebRequest request) {
@@ -139,6 +142,7 @@ public class RestExceptionHandler {
    * @return ResponseEntity<ErrorResponse> type object displaying error code and error message along
    *     * with HttpStatus as BAD_REQUEST.
    */
+  
   @ExceptionHandler(SaveAddressException.class)
   public ResponseEntity<ErrorResponse> saveAddressException(
       SaveAddressException exception, WebRequest request) {
@@ -153,6 +157,7 @@ public class RestExceptionHandler {
    * @return ResponseEntity<ErrorResponse> type object displaying error code and error message along
    *     with HttpStatus as BAD_REQUEST.
    */
+  
   @ExceptionHandler(PaymentMethodNotFoundException.class)
   public ResponseEntity<ErrorResponse> saveAddressException(
       PaymentMethodNotFoundException exception, WebRequest request) {
@@ -181,6 +186,7 @@ public class RestExceptionHandler {
    * @return ResponseEntity<ErrorResponse> type object displaying error code and error message along
    *     * with HttpStatus as NOT_FOUND.
    */
+  
   @ExceptionHandler(CategoryNotFoundException.class)
   public ResponseEntity<ErrorResponse> categoryNotFoundException(
       CategoryNotFoundException exception, WebRequest request) {
