@@ -11,6 +11,7 @@ public class Utility {
    * @return access-token
    * @throws AuthorizationFailedException
    */
+  
   public static String getTokenFromAuthorization(String authorization)
       throws AuthorizationFailedException {
     String[] authParts = authorization.split("Bearer ");
