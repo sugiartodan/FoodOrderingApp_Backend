@@ -32,6 +32,7 @@ public class CategoryController {
    *
    * @return CategoriesListResponse
    */
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.GET,
@@ -66,6 +67,8 @@ public class CategoryController {
    * @throws CategoryNotFoundException If the category with the given UUID doesn't exist in the
    *     database.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.GET,
