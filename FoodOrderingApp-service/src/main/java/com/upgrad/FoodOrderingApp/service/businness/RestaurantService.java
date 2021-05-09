@@ -36,6 +36,7 @@ public class RestaurantService {
    *
    * @return List of RestaurantEntity
    */
+  
   public List<RestaurantEntity> restaurantsByRating() {
 
     return restaurantDao.restaurantsByRating();
@@ -46,6 +47,7 @@ public class RestaurantService {
    *
    * @return List of RestaurantEntity
    */
+  
   public List<RestaurantEntity> restaurantsByName(final String search)
       throws RestaurantNotFoundException {
     if (search == null || search.isEmpty()) {
@@ -62,6 +64,7 @@ public class RestaurantService {
    *
    * @return List of RestaurantEntity
    */
+  
   public List<RestaurantEntity> restaurantByCategory(final String categoryUuid)
       throws CategoryNotFoundException {
     if (categoryUuid == null) {
@@ -83,6 +86,7 @@ public class RestaurantService {
    *     customer
    * @return RestaurantEntity
    */
+  
   @Transactional(propagation = Propagation.REQUIRED)
   public RestaurantEntity updateRestaurantRating(
       final RestaurantEntity restaurantEntity, final Double customerRating)
