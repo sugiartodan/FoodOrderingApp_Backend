@@ -35,6 +35,7 @@ public class AddressController {
    * @return ResponseEntity<SaveAddressResponse> type object along with HttpStatus as Ok.
    * @throws AuthorizationFailedException if any of the validation on customer access token fails.
    */
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.POST,
@@ -74,6 +75,8 @@ public class AddressController {
    * @param authorization customer login access token in 'Bearer <access-token>' format.
    * @return ResponseEntity<AddressListResponse> type object along with HttpStatus as OK.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.GET,
@@ -121,6 +124,8 @@ public class AddressController {
    * @param authorization customer login access token in 'Bearer <access-token>' format.
    * @return ResponseEntity<DeleteAddResponse> with HttpStatus as OK
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       path = "/address/{address_id}",
@@ -148,6 +153,8 @@ public class AddressController {
    *
    * @return ResponseEntity<StatesListResponse> type object along with HttpStatus as OK.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.GET,
