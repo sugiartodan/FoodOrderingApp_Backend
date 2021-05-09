@@ -34,6 +34,8 @@ public class CustomerController {
    * @return ResponseEntity<SignupCustomerResponse> type object along with HttpStatus CREATED.
    * @throws SignUpRestrictedException if customer entered details not meet the requirements.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.POST,
@@ -67,6 +69,8 @@ public class CustomerController {
    * @return ResponseEntity<LoginResponse> type object with HttpStatus as OK.
    * @throws AuthenticationFailedException if customer contactNumber or password is wrong.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.POST,
@@ -79,9 +83,12 @@ public class CustomerController {
     byte[] decode;
     String contactNumber;
     String password;
+    
     // ArrayIndexOutOfBoundsException occurs if the username or password is left as empty or try to
     // authorize without Basic in prefix 'Basic Base64<contactNumber:password>' then it throws
     // AuthenticationFailedException with code as ATH-003
+    
+    
     try {
       decode = Base64.getDecoder().decode(authorization.split("Basic ")[1]);
       String decodedText = new String(decode);
@@ -120,6 +127,8 @@ public class CustomerController {
    * @return ResponseEntity<LogoutResponse> type object along with HttpStatus as OK.
    * @throws AuthorizationFailedException if any of the validation on customer access token fails.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.POST,
@@ -147,6 +156,8 @@ public class CustomerController {
    * @throws AuthorizationFailedException if any validation on customer access token fails.
    * @throws UpdateCustomerException if first name is not provided in updateCustomerRequest param.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.PUT,
@@ -187,6 +198,8 @@ public class CustomerController {
    * @throws AuthorizationFailedException if any of the validation on customer access token fails.
    * @throws UpdateCustomerException if old or new password fields are empty.
    */
+  
+  
   @CrossOrigin
   @RequestMapping(
       method = RequestMethod.PUT,
